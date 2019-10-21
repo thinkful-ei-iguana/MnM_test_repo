@@ -1,1 +1,1 @@
-"Hello our names are Maggie and Mason"
+"Hello our names are Maggie and Mason and we're a pair today"
