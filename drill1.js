@@ -13,9 +13,9 @@ function getYearOfBirth(age) {
 
 function createGreeting(name, age) {
     try {
-        if ((typeof name !== 'string') || (typeof age !== 'number')) 
+        if ((typeof name === 'undefined') || (typeof age === 'undefined')) 
         {
-            return "Arguments not valid.";
+            throw new Error("Arguments not valid.");
         }
         const yob = getYearOfBirth(age);
         return `Hi, my name is ${name} and I am ${age} years old.
