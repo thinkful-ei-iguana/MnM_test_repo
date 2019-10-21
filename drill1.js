@@ -13,15 +13,19 @@ function getYearOfBirth(age) {
 
 function createGreeting(name, age) {
     try {
-    const yob = getYearOfBirth(age);
-    return `Hi, my name is ${name} and I am ${age} years old.
-    I was born in ${yob}`;
-    } catch (e) {
+        if ((typeof name !== 'string') || (typeof age !== 'number')) 
+        {
+            return "Arguments not valid.";
+        }
+        const yob = getYearOfBirth(age);
+        return `Hi, my name is ${name} and I am ${age} years old.
+        I was born in ${yob}`;
+        }  catch (e) {
         return e.message;
-    }
+  }
 }
 
-const greeting1 = createGreeting("Maggie", 30);
+const greeting1 = createGreeting();
 console.log(greeting1);
 //let birthYear = getYearOfBirth(30);
 //console.log(birthYear);
